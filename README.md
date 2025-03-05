@@ -20,12 +20,46 @@ The data for this project was gathered from multiple sources, including CSV file
 3. **Data Analytics**
 Once the data was clean and organized, I used SQL to conduct a series of analytical queries. These queries provided insights into:
 * **Employee Information:** List the employee number, last name, first name, sex, and salary.
-`sql
+`
 SELECT employee_number, last_name, first_name, sex, salary FROM Employees;
 `
 * **Hired in 1986:** List the first name, last name, and hire date for employees hired in 1986.
+`
+SELECT first_name, last_name, hire_date FROM Employees WHERE YEAR(hire_date) = 1986;
+`
 * **Department Managers:** List the manager of each department along with department and employee information.
-**Data Modeling**
+`
+SELECT D.manager_employee_number, D.department_number, D.department_name, E.employee_number, E.last_name, E.first_name
+FROM Departments D
+JOIN Employees E ON D.manager_employee_number = E.employee_number;
+`
+* **Employee Department Information:**  List department number, employee number, name, and department name.
+`
+SELECT E.department_number, E.employee_number, E.last_name, E.first_name, D.department_name
+FROM Employees E
+JOIN Departments D ON E.department_number = D.department_number;
+`
+* **Sales Department Employees:** List employees in the Sales department.
+`
+SELECT E.employee_number, E.last_name, E.first_name
+FROM Employees E
+JOIN Departments D ON E.department_number = D.department_number
+WHERE D.department_name = 'Sales';
+`
+* **Sales and Development Department Employees:** List employees in the Sales and Development departments.
+`
+SELECT E.employee_number, E.last_name, E.first_name, D.department_name
+FROM Employees E
+JOIN Departments D ON E.department_number = D.department_number
+WHERE D.department_name IN ('Sales', 'Development');
+`
+* **Frequency of Last Names:** List the frequency counts of employee last names.
+`
+SELECT last_name, COUNT(*) AS frequency FROM Employees GROUP BY last_name ORDER BY frequency DESC;
+`
+4. **Data Modeling**
+In this step, I inspected the provided CSV files and created an Entity Relationship Diagram (ERD) to represent the relationships between tables. The ERD was exported using QuickDBD and visualizes the tables' structure.
+
 Inspect the CSV files, and then sketch an Entity Relationship Diagram of the tables.
 ![QuickDBD-export](https://github.com/jessnguyen9/sql-challenge/assets/128268114/7c0b16a7-001e-47f9-9dcb-22f1793ce431)
 
