@@ -20,6 +20,7 @@ The data for this project was gathered from multiple sources, including CSV file
 3. **Data Analytics**
 Once the data was clean and organized, I used SQL to conduct a series of analytical queries. These queries provided insights into:
 * **Employee Information:** List the employee number, last name, first name, sex, and salary.
+
 `
 SELECT employee_number, last_name, first_name, sex, salary FROM Employees;
 `
