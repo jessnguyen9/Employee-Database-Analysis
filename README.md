@@ -9,13 +9,13 @@ The analysis was carried out independently, where I focused on data acquisition,
 1. **Data Acquisition**
 
 The data for this project was gathered from multiple sources, including CSV files containing detailed employee records. I imported these files into SQL databases to facilitate structured querying. The process involved:
-* Data Import: Loading CSV files into SQL tables.
-* Data Sources: Extracting data from multiple spreadsheets and organizing it into a relational database to ensure consistency across different tables.
+* **Data Import:** Loading CSV files into SQL tables.
+* **Data Sources:** Extracting data from multiple spreadsheets and organizing it into a relational database to ensure consistency across different tables.
 2. **Data Preparation**
-* Data Cleaning:
+* **Data Cleaning:**
   * Remove rows with missing or incomplete values to avoid misleading insights.
   * Standardized values (e.g., ensuring consistent formats for dates and names).
-* Data Manipulation
+* **Data Manipulation**
   * Converted data into appropriate types.
   * Created new features such as employee tenure by calculating the difference between hire date and current date.
 3. **Data Analytics**
@@ -87,6 +87,7 @@ In this step, I inspected the provided CSV files and created an Entity Relations
 1. **Use of Advanced SQL features**
 
 In future projects, I would incorporate more advanced SQL features such as window functions (e.g., ROW_NUMBER(), RANK()) to perform more complex analyses like ranking employees based on tenure or salary within each department.
+
 2. **Automated Reporting**
 
 Instead of manually generating reports, I would consider automating the reporting process by using tools like Tableau or Power BI. This would allow for real-time data visualization and easier communication.
