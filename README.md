@@ -1,5 +1,30 @@
-# sql-challenge
+# Data Analysis and Engineering: Employee Database Insights
 
+## Context
+In this project, I conducted an in-depth analysis using SQL to extract valuable insights from an employee dataset. The data covered various employee-related details such as employee numbers, departments, salaries, and hire dates. The goal was to uncover key trends and actionable insights that could help drive improvements in areas like staffing, salary planning, and departmental management.
+
+The analysis was carried out independently, where I focused on data acquisition, preparation, and analysis, followed by translating these findings into meaningful recommendations.
+
+## Technique Used
+1. **Data Acquisition**
+The data for this project was gathered from multiple sources, including CSV files containing detailed employee records. I imported these files into SQL databases to facilitate structured querying. The process involved:
+* Data Import: Loading CSV files into SQL tables.
+* Data Sources: Extracting data from multiple spreadsheets and organizing it into a relational database to ensure consistency across different tables.
+2. **Data Preparation**
+* Data Cleaning:
+  * Remove rows with missing or incomplete values to avoid misleading insights.
+  * Standardized values (e.g., ensuring consistent formats for dates and names).
+* Data Manipulation
+  * Converted data into appropriate types.
+  * Created new features such as employee tenure by calculating the difference between hire date and current date.
+3. **Data Analytics**
+Once the data was clean and organized, I used SQL to conduct a series of analytical queries. These queries provided insights into:
+* **Employee Information:** List the employee number, last name, first name, sex, and salary.
+`sql
+SELECT employee_number, last_name, first_name, sex, salary FROM Employees;
+`
+* **Hired in 1986:** List the first name, last name, and hire date for employees hired in 1986.
+* **Department Managers:** List the manager of each department along with department and employee information.
 **Data Modeling**
 Inspect the CSV files, and then sketch an Entity Relationship Diagram of the tables.
 ![QuickDBD-export](https://github.com/jessnguyen9/sql-challenge/assets/128268114/7c0b16a7-001e-47f9-9dcb-22f1793ce431)
