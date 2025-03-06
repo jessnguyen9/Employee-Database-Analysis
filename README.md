@@ -83,7 +83,7 @@ In this step, I inspected the provided CSV files and created an Entity Relations
 * Challenge: As the dataset grew, certain queries took longer to execute, especially when joining multiple tables or aggregating large amounts of data.
 * Solution: I optimized queries by indexing frequently used columns and breaking down complex queries into smaller, more manageable parts.
   
-## What Would I Do Differently?
+## What Could Have Been Done Differently?
 1. **Use of Advanced SQL features**
 
 In future projects, I would incorporate more advanced SQL features such as window functions (e.g., ROW_NUMBER(), RANK()) to perform more complex analyses like ranking employees based on tenure or salary within each department.
